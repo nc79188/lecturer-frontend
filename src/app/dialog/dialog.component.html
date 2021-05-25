@@ -1,0 +1,18 @@
+<div class="container">
+    <h1 mat-dialog-title>Lecturer Details</h1>
+    <mat-dialog-content>
+        <p>Lecturer</p>
+        <mat-form-field appearance="fill" style="display: block;">
+            <mat-label>name</mat-label>
+            <input matInput [(ngModel)]="data.name">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Class</mat-label>
+            <input matInput [(ngModel)]="data.className">
+        </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">cancel</button>
+        <button mat-button [mat-dialog-close]="data" cdkFocusInitial>add</button>
+    </mat-dialog-actions>
+</div>
